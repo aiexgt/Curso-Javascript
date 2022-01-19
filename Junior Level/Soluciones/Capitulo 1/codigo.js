@@ -1,6 +1,7 @@
 'use strict'
 
-const definirCompra = function(n){
+//Problema A
+const definirCompra = n =>{
     let dinero = prompt(`Dinero de ${n}`);
 
     if(dinero >= 0.6 && dinero < 1){
@@ -32,6 +33,27 @@ const definirCompra = function(n){
     }
 }
 
+/*
 alert(definirCompra("Cofla"));
 alert(definirCompra("Roberto"));
 alert(definirCompra("Pedro"));
+*/
+
+//Problema B
+const compraBoleto = (precioBoleto) =>{
+    let dinero = prompt("Dinero de Cofla");
+    if(dinero >= precioBoleto && dinero < (precioBoleto*2)){
+        return("Comprate 1 boleto y te sobra " + (dinero-precioBoleto));
+    }
+    else if(dinero >= (precioBoleto*2) && dinero < (precioBoleto*3)){
+        return("Comprate 2 boletos y te sobra " + (dinero-(precioBoleto*2)));
+    }
+    else if(dinero >= (precioBoleto*3)){
+        return("Comprate 3 boletos y regalas " + (dinero-(precioBoleto*3)));
+    }
+    else{
+        return("Pinche Cofla coda");
+    }
+}
+
+alert(compraBoleto(5));
