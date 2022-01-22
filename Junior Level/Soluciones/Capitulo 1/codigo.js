@@ -56,4 +56,30 @@ const compraBoleto = (precioBoleto) =>{
     }
 }
 
+/*
 alert(compraBoleto(5));
+*/
+
+//Problema C
+const detector = ()=> {
+    let decision = prompt("Resultado poligrafo");
+    if(decision == 1){
+        return(`Esta mintiendo
+        Dar Descarga Eléctrica`);
+    }
+    else if(decision == 2){
+        return(`Esta diciendo la verdad
+        No hacer nada`);
+    }
+    else if(decision == 3){
+        return(`Indecisión
+        Aclarar pregunta`);
+    }
+    else{
+        return(`Respuesta invalida`);
+    }
+}
+
+/*
+alert(detector());
+*/
