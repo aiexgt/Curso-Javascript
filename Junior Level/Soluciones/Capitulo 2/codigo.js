@@ -29,8 +29,10 @@ validarCliente(3);
 */
 
 //Problema B
+/*
 let cantidad = prompt("¿Cuantos alumnos son");
 let alumnosTotales = [];
+
 
 for(let i=0;i<cantidad;i++){
     alumnosTotales[i] = [prompt("Nombre del alumno " + (i+1)),0];
@@ -60,3 +62,47 @@ for(let alumno in alumnosTotales){
     }
     document.write(resultado);
 }
+*/
+
+//Problema C
+
+const suma = (num1,num2)=>{
+    return parseInt(num1) + parseInt(num2);
+}
+
+const resta = (num1,num2)=>{
+    return parseInt(num1) - parseInt(num2);
+}
+
+const multiplicacion = (num1,num2)=>{
+    return parseInt(num1) * parseInt(num2);
+}
+
+const division = (num1,num2)=>{
+    return parseInt(num1) / parseInt(num2);
+}
+
+alert("¿Que operación deseas realizar?");
+let operacion = prompt("1. Suma, 2: Resta, 3: Multiplicación, 4: División");
+
+let numero1 = prompt("Primer numero");
+let numero2 = prompt("Segundo numero");
+let resultado;
+
+if(operacion == 1){
+    resultado = suma(numero1,numero2);
+}
+else if(operacion == 2){
+    resultado = resta(numero1,numero2);
+}
+else if(operacion == 3){
+    resultado = multiplicacion(numero1,numero2);
+}
+else if(operacion == 4){
+    resultado = division(numero1,numero2);
+}
+else{
+    resultado = "Error";
+}
+
+alert("Resultado: " + resultado);
