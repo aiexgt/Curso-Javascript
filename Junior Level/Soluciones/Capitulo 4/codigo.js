@@ -1,4 +1,5 @@
 //Problema A
+/*
 class Calculadora{
     constructor(){
 
@@ -71,4 +72,54 @@ else{
 }
 
 alert("Resultado: " + resultado);
+*/
 
+//Problema B
+
+const obtenerInformacion = (materia)=>{
+    let materias = {
+        fisica: ["Lopez","Alex","Miguel","Rene","Daily","Cofla"],
+        programacion: ["Lima","Alex","Rene"],
+        logica: ["Loarca","Miguel","Alex"],
+        quimica: ["Paniagua","Daily","Cofla"]
+    }
+    if(materias[materia] !== undefined){
+        return [materias[materia],materia,materias];
+    }else{
+        return materias;
+    }
+}
+
+const mostrarInformacion = (materia)=>{
+    let informacion = obtenerInformacion(materia);
+
+    if(informacion !== false){
+        let profesor = informacion[0][0];
+        let alumnos = informacion[0];
+        alumnos.shift();
+        document.write(`Profesor de ${informacion[1]} es ${profesor} <br>
+        Los alumnos son ${alumnos} <br><br>`);
+    }
+}
+
+const cantidadClases = (alumno)=>{
+    let informacion = obtenerInformacion();
+    let clasesPresentes = [];
+    let CantidadTotal = 0;
+    for(let info in informacion){
+        if(informacion[info].includes(alumno)){
+            CantidadTotal++;
+            clasesPresentes.push(" " + info);
+        }
+    }
+    return `El alumno ${alumno} esta en ${CantidadTotal} de clases <br>
+    Esta cursando las clases ${clasesPresentes} <br><br>`;
+}
+
+mostrarInformacion("fisica");
+mostrarInformacion("quimica");
+mostrarInformacion("programacion");
+mostrarInformacion("logica");
+
+document.write(cantidadClases("Cofla"));
+document.write(cantidadClases("Alex"));
