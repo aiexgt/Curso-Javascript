@@ -44,10 +44,10 @@ const printOutput = (name,purchase,change)=>{
     return (`${name} puede comprar ${purchase} y su cambio es Q.${change} <br>`);
 }
 
-let name = document.querySelector("#name");
-let money = document.querySelector("#money");
-let button = document.querySelector("#enviar");
-let divOutput = document.querySelector("#result");
+let name = document.querySelector("#nameA");
+let money = document.querySelector("#moneyA");
+let button = document.querySelector("#enviarA");
+let divOutput = document.querySelector("#resultA");
 
 button.addEventListener('click',function(){
     event.preventDefault();
