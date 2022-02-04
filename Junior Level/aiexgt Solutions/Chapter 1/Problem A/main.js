@@ -1,47 +1,31 @@
 'use strict'
 
 const calculatePurchase = (money)=>{
-    let purchase;
-    let change;
     if(money >= 0.6 && money < 1){
-        purchase = "Helado de Agua";
-        change = money-0.6;
-        return[purchase,change];
+        return["Helado de Agua",(money-0.6)];
     }
     else if(money >= 1 && money < 1.6){
-        purchase = "Helado de Crema";
-        change = money - 1;
-        return[purchase,change];
+        return["Helado de Crema",(money - 1)];
     }
     else if(money >= 1.6 && money < 1.7){
-        purchase = "Helado de Heladix";
-        change = money - 1.6;
-        return[purchase,change];
+        return["Helado de Heladix",(money - 1.6)];
     }
     else if(money >= 1.7 && money < 1.8){
-        purchase = "Helado de Heladovich";
-        change = money - 1.7;
-        return[purchase,change];
+        return["Helado de Heladovich",(money - 1.7)];
     }
     else if(money >= 1.8 && money < 2.9){
-        purchase = "Helado de Helardo";
-        change = money - 1.8;
-        return[purchase,change];
+        return["Helado de Helardo",(money - 1.8)];
     }
     else if(money >= 2.9){
-        purchase = "Helado con Confites o un Pote de 1/4kg";
-        change = money - 2.9;
-        return[purchase,change];
+        return["Helado con Confites o un Pote de 1/4kg",(money - 2.9)];
     }
     else{
-        purchase = "No te alcanza para nada";
-        change = money;
-        return[purchase,change];
+        return["ningun helado",(money-0)];
     }
 }
 
 const printOutput = (name,purchase,change)=>{
-    return (`${name} puede comprar ${purchase} y su cambio es Q.${change} <br>`);
+    return (`${name} puede comprar ${purchase} y su cambio es Q.${change} <br><hr>`);
 }
 
 let name = document.querySelector("#name");
