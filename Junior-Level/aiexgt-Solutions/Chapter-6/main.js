@@ -13,7 +13,7 @@ function createKey(name,model,price){
 
 let documentFragment = document.createDocumentFragment();
 
-for(let i=1;i<=20;i++){
+for(let i=1;i<=40;i++){
     let modelRandom = Math.round(Math.random()*10000);
     let priceRandom = Math.round(Math.random()*10+30);
     let key = createKey(`llave ${i}`,`modelo ${modelRandom}`,priceRandom);
@@ -26,4 +26,8 @@ for(let i=1;i<=20;i++){
     div.innerHTML = key[0] + key[1] + key[2] + key[3];
     documentFragment.appendChild(div);
 };
+
+button.addEventListener('click',()=>{
+    alert("Compro el modelo: " + document.querySelector(".key-data").value);
+});
 container.appendChild(documentFragment);
