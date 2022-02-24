@@ -1,0 +1,53 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #313131;
+}
+
+input{
+    display: block;
+    padding: 9px;
+    width: 300px;
+    margin: 12px 02px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #06a7f1;
+    background: transparent;
+    outline: none !important;
+    transition: 0.3s;
+    width: 30%;
+    color: #313131;
+}
+
+input:hover{
+    background-color: #06a7f1;
+}
+
+input::placeholder{
+    color: #000;
+}
+
+input:hover::placeholder{
+    color: #fff;
+}
+
+input[type="submit"]{
+    width: 20%;
+    padding: 12px;
+    background-color: #06a7f1;
+    color: #000;
+    margin: 24px 0;
+    margin-bottom: 12px;
+}
+
+input[type="submit"]:hover{
+    background-color: #094e6e;
+    color: #fff;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
