@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+}
+
+.formulario-de-notas{
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+    background: #48e;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2{
+    margin: 0;
+    color: #fff;
+}
+
+.nota-alumno{
+    margin: 20xpx;
+    width: 25%;
+}
+
+.enviar-nota{
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: ease all .3s;
+}
+
+.enviar-nota:hover{
+    background: rgb(142,167,192);
+}
+
+.modal-background{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+}
+
+.modal{
+    background: #fff;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.resultado{
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        display: flex;
+    }
+    
+    100%{
+        opacity: 1;
+        display: flex;
+    }
+}
